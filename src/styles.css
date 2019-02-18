@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@syncfusion/ej2-material-theme/styles/material.css";
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+}
+
+body {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Restricting the parent menu wrapper size */
+.e-menu-wrapper.e-scrollable-menu:not(.e-menu-popup) {
+  width: 500px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
