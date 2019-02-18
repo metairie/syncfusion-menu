@@ -27,45 +27,65 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## installation guide
+### Create the project
+`ng new syncfusion-menu` 
 
-ng new syncfusion-menu
-cd syncfusion-menu
-npm install --save @angular/material @angular/cdk @angular/animations
-ng add @angular/material
+`cd syncfusion-menu`
 
-npm install @syncfusion/ej2-base --save
-npm install @syncfusion/ej2-angular-navigations --save
-ng add @syncfusion/ej2-angular-navigations --theme="material"
 
-# add material to app.module.ts
-imports: [
-	// Material
-	MatIconModule,
-	MatMenuModule,
-	MatTableModule,
-	MatPaginatorModule,
-	MatFormFieldModule,
-	MatInputModule,
-	MatButtonModule,
-	MatSidenavModule,
-	MatToolbarModule
+### Install agular/material and add to the project
+`npm install --save @angular/material @angular/cdk @angular/animations`
+
+`ng add @angular/material`
+
+### Install ej2 base, menu module, add "material" theme
+
+`npm install @syncfusion/ej2-base --save`
+
+`npm install @syncfusion/ej2-angular-navigations --save`
+
+`ng add @syncfusion/ej2-angular-navigations --theme="material"`
+
+### Configuration expected
+
+app.module.ts
+---
+	import [
+      MatIconModule,
+      MatMenuModule,
+      MatTableModule,
+      MatPaginatorModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatToolbarModule
+	]
 
 package.json 
+---
+
 	@syncfusion/ej2-angular-theme
+
 angular.json 
+---
+
 	styles: [
 		"src/styles.css",
 		"../node_modules/@syncfusion/ej2-material-theme/styles/material.css"
 	]
+
 app.module.ts 
+---
+
 	import { MenuModule } from '@syncfusion/ej2-angular-navigations';
+	...
 	imports: [
 		...
 		MenuModule
 	]
 
 style.css
-	@import "../node_modules/@syncfusion/ej2-material-theme/styles/material.css";
+---
 
-	
-	
+	@import "../node_modules/@syncfusion/ej2-material-theme/styles/material.css";
